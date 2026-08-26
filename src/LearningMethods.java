@@ -5,6 +5,7 @@ public class LearningMethods {
     }
 
     public void main(String[] args) {
-
+        int sum = simpleAddition(3,4);
+        System.out.println(sum);
     }
 }
