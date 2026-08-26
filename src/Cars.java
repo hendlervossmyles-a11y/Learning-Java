@@ -1,3 +1,5 @@
+// Challenge 1 Add a method inside Cars called displayDetails() that prints a single car's color and model.
+
 public class Cars {
     String colorOfCar;
     String modelOfCar;
@@ -10,5 +12,9 @@ public class Cars {
         numberOfCars++; // ++ means to increment the value by 1
         totalNumberOfCars++;  // Because totalNumberOfCars is static it only applies to the class
         					 // Cars and will count every car.
+    }
+
+    public void displayDetails() {
+
     }
 }
