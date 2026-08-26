@@ -8,6 +8,7 @@ public class Cars {
         this.modelOfCar = modelOfCar;
         this.colorOfCar = colorOfCar;
         numberOfCars++; // ++ means to increment the value by 1
-        totalNumberOfCars++;
+        totalNumberOfCars++;  // Because totalNumberOfCars is static it only applies to the class
+        					 // Cars and will count every car.
     }
 }
