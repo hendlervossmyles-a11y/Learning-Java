@@ -4,6 +4,7 @@ public class Cars {
     String colorOfCar;
     String modelOfCar;
     int numberOfCars;
+    int mileage;
     static int totalNumberOfCars;
 
     Cars(String modelOfCar, String colorOfCar)  {
@@ -15,6 +16,13 @@ public class Cars {
     }
 
     public void displayDetails() {
+        this.colorOfCar = colorOfCar;
+        this.modelOfCar = modelOfCar;
+        System.out.println("Model: " + modelOfCar + " Color: " + colorOfCar);
 
+    }
+
+    public void drive() {
+        mileage += 50;
     }
 }
