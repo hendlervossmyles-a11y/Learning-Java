@@ -14,7 +14,7 @@ public class Fundraiser {
 		System.out.println("# Entered: " + student_ticket);
 		
 		double final_cost = (adult_ticket*adult_ticket_cost)+(student_ticket*student_ticket_cost);
-		System.out.println("Final Cost: "+final_cost+"$");
+		System.out.println("Final Cost: "+final_cost+"$"); //Test
 
 		
 	}
