@@ -15,7 +15,7 @@ public class Deposits {
 
 		account_amount = account_amount+(num_days*10);
 
-		System.out.println("The value after "+num_days+" days is: "+account_amount); //Test
+		System.out.println("The value after "+num_days+" days is: "+account_amount); //Test2
 	}
 	
 	
