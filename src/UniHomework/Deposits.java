@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Deposits {
-	public static void main(String args) {
+	public static void main(String[] args) {
 		double num_days = 0;
 		Scanner reader = new Scanner(System.in);
 		
