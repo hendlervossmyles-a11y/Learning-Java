@@ -103,12 +103,14 @@ public class Week3functions {
 			char c2 = strand2.charAt(i);
 
 			if ((c1 == 'A' && c2 == 'T') || (c1 == 'T' && c2 == 'A') || (c1 == 'C' && c2 == 'G') || (c1 == 'G' && c2 == 'C')) {
-				return true;
-			} else
+				continue;
+			}
+			else
 				return false;
 		}
+		return true;
 
-		return false;
+
 	}
 
 	/**
@@ -125,6 +127,8 @@ public class Week3functions {
 	 */
 	public static int countPseudoVowels(String word) {
 		int count = 0;
+		int yCount = 0;
+		boolean countY = true;
 		word = word.toLowerCase();
 		for(int i = 0; i<word.length();i++) {
 			if(word.charAt(i)== 'a' ||
@@ -132,20 +136,25 @@ public class Week3functions {
 					word.charAt(i)== 'i' ||
 					word.charAt(i)== 'o' ||
 					word.charAt(i)== 'u') {
+				countY = false;
 				count++;
 			}
-				else if(i>0 && word.charAt(i) == 'y') {
-					if(word.charAt(i-1)== 'a' ||
-							word.charAt(i-1)== 'e' ||
-							word.charAt(i-1)== 'i' ||
-							word.charAt(i-1)== 'o' ||
-							word.charAt(i-1)== 'u')
-						count ++;
 
-
-
+			if(word.charAt(i) == 'y') {
+				if(i>0 &&
+						(word.charAt(i-1)== 'a' ||
+								word.charAt(i-1)== 'e' ||
+								word.charAt(i-1)== 'i' ||
+								word.charAt(i-1)== 'o' ||
+								word.charAt(i-1)== 'u'))
+					count ++;
+				else
+					yCount ++;
 			}
 		}
+
+		if (countY == true)
+			return count+yCount;
 		return count;
 	}
 }

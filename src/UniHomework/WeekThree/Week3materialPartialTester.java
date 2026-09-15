@@ -91,7 +91,7 @@ public class Week3materialPartialTester {
 	
     public static void testCountPseudoVowels() {
 		System.out.println("\n ***** Testing PseudoVowels *****");
-    	String [] tests = {"apple","APPLE","turkey","SLY","PAYDAY","psych","adieu","BAYOU"};
+    	String [] tests = {"apple","APPLE","turkey","yaya","PAYDAY","psych","adieu","BAYOU"};
     	for (String onetest: tests)
     	{
     		int answer = Week3functions.countPseudoVowels(onetest);
