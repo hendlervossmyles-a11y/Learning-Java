@@ -1,3 +1,5 @@
+import java.security.KeyStore;
+import java.util.Locale;
 
 public class Week3functions {
 
@@ -35,7 +37,20 @@ public class Week3functions {
 	 * @return the jacox metric
 	 */
 	public static int jacoxMetric(String oneStrand) {
-		return -6;
+		int charCount = 0;
+		oneStrand = oneStrand.toLowerCase();
+		for(int i = 0; i < oneStrand.length(); i++ ) {
+			if(oneStrand.charAt(i) == 'c' )
+				charCount ++;
+			else if(oneStrand.charAt(i) == 'g')
+				charCount ++;
+
+			else
+				continue;
+
+            }
+		return charCount;
+
 	}
 	
 	
@@ -48,7 +63,21 @@ public class Week3functions {
 	 * @return true if there are more A's than T's.  false otherwise
 	 */
 	public static boolean skewed(String oneStrand) {
-		return false;
+		int aCount = 0;
+		int tCount = 0;
+		oneStrand = oneStrand.toLowerCase();
+		for(int i = 0; i<oneStrand.length(); i++) {
+			if (oneStrand.charAt(i) == 'a')
+				aCount++;
+			else if (oneStrand.charAt(i) == 't')
+				tCount++;
+			else
+				continue;
+		}
+		if(aCount > tCount)
+			return true;
+		else
+			return false;
 	}
 	
 	/**
@@ -83,5 +112,7 @@ public class Week3functions {
 	{
 		return -100;
 	}
+}
 
+void main() {
 }
