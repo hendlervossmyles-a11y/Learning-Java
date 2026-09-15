@@ -94,7 +94,42 @@ public class Week3functions {
 	 *      ACCGTTA and TGGCAAT  should result in true.
 	 */
 	public static boolean bind(String strand1, String strand2) {
-		return false;
+		if(strand1.length() != strand2.length())
+			return false;
+		int aCount = 0;
+		int cCount = 0;
+		int tCount = 0;
+		int gCount = 0;
+
+		int aCount2 = 0;
+		int cCount2 = 0;
+		int tCount2 = 0;
+		int gCount2 = 0;
+
+		for(int i = 0;  i< strand1.length(); i++) {
+			if( strand1.charAt(1) == 'a')
+				aCount ++;
+			else if( strand1.charAt(1) == 'c')
+				cCount ++;
+			else if( strand1.charAt(1) == 't')
+				tCount ++;
+			else if( strand1.charAt(1) == 'g')
+				gCount ++;
+		}
+		for(int i = 0;  i< strand2.length(); i++) {
+			if( strand1.charAt(1) == 'a')
+				aCount2 ++;
+			else if( strand1.charAt(1) == 'c')
+				cCount2 ++;
+			else if( strand1.charAt(1) == 't')
+				tCount2 ++;
+			else if( strand1.charAt(1) == 'g')
+				gCount2 ++;
+		}
+		if (aCount != aCount2 || cCount != cCount2 || tCount != tCount2 || gCount != gCount2)
+			return false;
+		else
+			return true;
 	}
 	/**
 	 * This function counts the number of pseudo-vowels in a word.    A "pseudo-vowel" is defined 
